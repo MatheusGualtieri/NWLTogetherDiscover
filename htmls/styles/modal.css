@@ -1,0 +1,82 @@
+html {
+  /*Colors*/
+  --grey: #3a3a37;
+  --darker-grey: #1d1d1b;
+  --white-grey: #b4b7c6;
+  --yellow: #fdff00;
+  --black-blue: #3a404e;
+  --darker-yellow: #cacc00;
+  --darker-red: #ad0408;
+  --red: #c52105;
+  --ligth-red: #dc998b;
+  --black-red: #330102;
+  --white: #f5f5f5;
+  --white-2: #fffafa;
+  --modal-bg: rgba(58, 58, 55, 0.8);
+  /*Fonts*/
+  /*1 rem = 16px(User Agent) = 100%(User Agent)*/
+  font-size: 62.5%;
+  /*Agora 1 rem = 10px*/
+  --title-font-size: 2.8rem;
+  --subtitle-font-size: 1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
+}
+.modal-wrapper.active {
+  visibility: visible;
+  opacity: 1;
+}
+.modal-wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+
+  background: var(--modal-bg);
+  color: var(--white);
+
+  visibility: hidden;
+  opacity: 0;
+}
+.modal-wrapper .modal {
+  width: min(59rem, 90%);
+  background: var(--darker-grey);
+  margin: auto;
+
+  border-radius: 0.8rem;
+  font-family: var(--body-font);
+  text-align: center;
+
+  padding: 6.4rem;
+}
+.modal-wrapper .modal .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-wrapper .modal h2 {
+  color: var(--white-grey);
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+.modal-wrapper .modal p {
+  margin-bottom: 2.4rem;
+}
+.modal-wrapper .modal input {
+  padding: 1.3rem 1.6rem;
+  border: 0.2rem solid var(--darker-red);
+  margin-bottom: 4rem;
+  outline: none;
+  width: min(70%, 30.2rem);
+}
+.modal-wrapper .modal .buttons > button,
+.modal-wrapper .modal .buttons > .button {
+  padding: 1.3rem 3.2rem;
+}
+.modal-wrapper .modal .buttons > .button {
+  margin-right: 0.8rem;
+}

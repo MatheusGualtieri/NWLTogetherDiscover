@@ -1,0 +1,150 @@
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  /*Colors*/
+  --grey: #3a3a37;
+  --darker-grey: #1d1d1b;
+  --white-grey: #b4b7c6;
+  --yellow: #fdff00;
+  --black-blue: #3a404e;
+  --darker-yellow: #cacc00;
+  --darker-red: #ad0408;
+  --red: #c52105;
+  --ligth-red: #dc998b;
+  --black-red: #330102;
+  --white: #f5f5f5;
+  --white-2: #fffafa;
+  /*Fonts*/
+  /*1 rem = 16px(User Agent) = 100%(User Agent)*/
+  font-size: 62.5%;
+  /*Agora 1 rem = 10px*/
+  --title-font-size: 2.8rem;
+  --subtitle-font-size: 1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
+}
+body {
+  display: flex;
+  height: 100vh;
+  background: var(--grey);
+}
+body,
+button,
+input,
+textarea {
+  /*Clamp é um intervalod etamanho*/
+  font-size: clamp(14px, 1.6rem, 2vw);
+  font-family: var(--title-font);
+}
+.content {
+  width: 100%;
+  margin: 0 auto;
+}
+.title {
+  color: var(--white);
+  font-family: var(--title-font);
+  font-size: var(--title-font-size);
+}
+.subtitle {
+  color: var(--white);
+  font-family: var(--body-font);
+}
+.logo {
+  color: var(--yellow);
+}
+.sr-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+/*Input And Buttons*/
+input,
+button,
+.button {
+  border-radius: 0.8rem;
+  height: 5rem;
+}
+button,
+.button {
+  font-family: var(--body-font);
+  font-weight: 500;
+  line-height: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--darker-red);
+  color: var(--white-2);
+
+  transition: filter 0.2s;
+
+  cursor: pointer;
+}
+button:hover,
+.button:hover {
+  filter: brightness(1.1);
+}
+
+button > i,
+.button > i {
+  margin-right: 1rem;
+  width: 2rem;
+}
+
+button.outlined,
+.button.outlined {
+  background: var(--white);
+  color: var(--darker-red);
+  border: 0.2rem solid var(--darker-red);
+}
+.button.outlined p {
+  color: var(--darker-red);
+}
+
+button.grey,
+.button.grey {
+  background: var(--grey);
+  color: var(--white-grey);
+}
+
+/*Header*/
+header p {
+  color: var(--white-2);
+}
+
+.content header {
+  width: 100%;
+  margin-bottom: 3.5rem;
+
+  background: var(--darker-grey);
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  font-family: var(--title-font);
+  font-weight: bold;
+}
+.content header p {
+  font-size: 3rem;
+}
+.content header i {
+  margin-right: 0.5rem;
+  margin-left: 3.5rem;
+  font-size: 4rem;
+}
