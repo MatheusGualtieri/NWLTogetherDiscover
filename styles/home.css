@@ -1,0 +1,117 @@
+:root {
+  /*Colors*/
+  --grey: #3a3a37;
+  --darker-grey: #1d1d1b;
+  --white-grey: #b4b7c6;
+  --yellow: #fdff00;
+  --black-blue: #3a404e;
+  --darker-yellow: #cacc00;
+  --darker-red: #ad0408;
+  --red: #c52105;
+  --black-red: #330102;
+  --white: #f5f5f5;
+  --white-2: #fffafa;
+  /*Fonts*/
+  /*1 rem = 16px(User Agent) = 100%(User Agent)*/
+  font-size: 62.5%;
+  /*Agora 1 rem = 10px*/
+  --title-font-size: 2.8rem;
+  --subtitle-font-size: 1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
+}
+
+section a {
+  color: var(--white-2);
+}
+.content {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 11.4rem 1fr;
+
+  grid-template-areas:
+    'header header'
+    'left right';
+}
+
+header {
+  grid-area: header;
+}
+#bg {
+  grid-area: left;
+  background: url('/assets/img/Retro_gamepad.svg') no-repeat top/contain;
+}
+main {
+  grid-area: right;
+  display: flex;
+  align-items: center;
+  margin-top: -12rem;
+}
+
+main .container {
+  width: min(36.3rem, 100%);
+}
+
+main h2 {
+  font-family: var(--title-font);
+  color: var(--title-font);
+  font-size: clamp(20px, 5vw, var(--title-font-size));
+  margin-bottom: 2.4rem;
+}
+
+input {
+  border: 0.2rem solid var(--white-gray);
+  padding: 0 1.6rem;
+}
+
+input,
+button,
+.button {
+  width: 100%;
+  margin-bottom: 1.8rem;
+}
+/*Separator Line*/
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 4rem 0;
+}
+.separator div:nth-child(2) {
+  color: var(--darker-red);
+  font-family: var(--body-font);
+  font-weight: 400;
+  padding: 0 1.35rem;
+  line-height: 0;
+}
+.separator div:nth-child(1),
+.separator div:nth-child(3) {
+  background: var(--darker-red);
+  width: 100%;
+  height: 1px;
+}
+/*Create Ball*/
+.ball {
+  width: 21rem;
+  height: 21rem;
+  background: var(--darker-red);
+  clip-path: circle();
+  position: fixed;
+  opacity: 0.5;
+}
+.ball.top {
+  width: 63.3rem;
+  height: 63.3rem;
+  top: 40rem;
+  right: -55rem;
+}
+.ball.bottom {
+  right: 5.6rem;
+  bottom: -15rem;
+}
+.ball.left {
+  width: 40rem;
+  height: 40rem;
+  top: 5rem;
+  left: -35rem;
+}
